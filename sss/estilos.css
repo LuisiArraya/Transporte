@@ -1,0 +1,328 @@
+/* Fuente del proyecto */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Colores corporativos */
+:root {
+	--oscuro: #092b49;
+	/* Azul claro del logo */
+	--blanco: #FFFFFF;
+	/* Blanco */
+	--claro: #f76c00;
+	/* Amarillo del logo */
+	--negro: #343A40;
+	/* Gris oscuro */
+	--degradado: linear-gradient(90deg, --oscuro: #092b49, #FFC107);
+	/* Degradado con los colores del logo */
+	--star: #FFC107;
+	/* Amarillo para las estrellas */
+	--gris: #F8F9FA;
+	/* Gris claro para fondos */
+	--gris-oscuro: #6C757D;
+	/* Gris oscuro para texto */
+	--sombra: rgba(0, 0, 0, 0.1);
+	/* Sombra ligera */
+}
+
+/* General */
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	border: none;
+}
+
+body {
+	background: var(--gris);
+	color: var(--gris-oscuro);
+	line-height: 1.6;
+}
+
+/* Secciones */
+section {
+	padding: 4rem 10%;
+	margin-bottom: 2rem;
+}
+
+section:nth-child(even) {
+	background: var(--gris);
+}
+
+section:nth-child(odd) {
+	background: var(--blanco);
+}
+
+h1,
+h2,
+h4 {
+	color: var(--oscuro);
+	margin-bottom: 2rem;
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+h4 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+/* Opiniones */
+.opiniones-lista {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	/* Espaciado entre las filas */
+	margin-top: 20px;
+}
+
+.testimonial-client {
+	background: var(--blanco);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	text-align: left;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-client:hover {
+	transform: translateY(-0.5rem);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.client-name {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: var(--oscuro);
+	margin-bottom: 10px;
+}
+
+.testimonial-text {
+	font-size: 1.2rem;
+	color: var(--gris-oscuro);
+	margin-bottom: 15px;
+}
+
+.testimonial-rating {
+	color: var(--star);
+	display: flex;
+	gap: 5px;
+	/* Espaciado entre las estrellas */
+}
+
+.fa-star {
+	font-size: 1.2rem;
+	color: #ccc;
+	/* Estrellas grises por defecto */
+}
+
+.checked {
+	color: var(--star);
+	/* Estrellas amarillas */
+}
+
+.testimonial-client img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+/* Footer */
+footer {
+	background: var(--oscuro);
+	color: var(--blanco);
+	padding: 3rem 2rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+footer .company-name {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+footer .social-links {
+	display: flex;
+	gap: 1rem;
+}
+
+footer .social-links a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: var(--blanco);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.3s ease, background 0.3s ease;
+}
+
+footer .social-links a img {
+	width: 20px;
+	height: 20px;
+}
+
+footer .social-links a:hover {
+	transform: scale(1.1);
+	background: var(--claro);
+}
+
+footer .whatsapp-button img {
+	width: 50px;
+	height: 50px;
+	transition: transform 0.3s ease;
+}
+
+footer .whatsapp-button img:hover {
+	transform: scale(1.2);
+}
+
+footer p {
+	font-size: 1rem;
+	margin: 0;
+}
+
+/* Menú */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: var(--blanco);
+	box-shadow: 0 0.5rem 1rem var(--sombra);
+	text-transform: capitalize;
+	padding: 1rem 9%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	z-index: 1000;
+}
+
+header .logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+header .logo img {
+	width: 250px;
+	height: auto;
+}
+
+
+
+header .navbar {
+	display: flex;
+	gap: 2rem;
+}
+
+header .navbar a {
+	font-size: 1.2rem;
+	color: var(--oscuro);
+	transition: color 0.3s ease;
+}
+
+header .navbar a:hover {
+	color: var(--claro);
+}
+
+/* Menú responsivo */
+header input {
+	display: none;
+}
+
+header label {
+	font-size: 2rem;
+	color: var(--claro);
+	cursor: pointer;
+	display: none;
+}
+
+header .navbar {
+	position: static;
+	transform: none;
+	opacity: 1;
+	flex-direction: row;
+	background: none;
+	box-shadow: none;
+	border-top: none;
+	padding: 0;
+}
+
+header input:checked ~ .navbar {
+	transform: scaleY(1);
+	opacity: 1;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+	section {
+		padding: 2rem 5%;
+	}
+
+	.opiniones-lista {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.testimonial-text {
+		font-size: 1rem;
+	}
+
+	footer .social-links {
+		flex-direction: column;
+	}
+
+	header {
+		padding: 1rem 5%;
+	}
+
+	header .navbar {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: var(--blanco);
+		flex-direction: column;
+		align-items: center;
+		transform-origin: top;
+		transform: scaleY(0);
+		opacity: 0;
+		box-shadow: 0 0.5rem 1rem var(--sombra);
+		border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+		transition: 0.3s ease;
+	}
+
+	header label {
+		display: block;
+	}
+
+	header input:checked ~ .navbar {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}
+
+/* Imágenes de movilidades */
+.movilidades img {
+	width: 200px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 10px;
+}
